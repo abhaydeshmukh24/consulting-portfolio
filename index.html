@@ -16,8 +16,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
-    <script type="module" crossorigin src="./assets/index-jmM_Bsu-.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Do9tjHr2.css">
+    <script type="module" crossorigin src="./assets/index-hM9aFEjg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DXiJqp7c.css">
   </head>
   <body>
     <!-- Startup Page Transition Overlay Screen -->
@@ -31,22 +31,10 @@
       <div class="grid-line"></div>
     </div>
 
-    <!-- Liquid Glass Simulation Background -->
-    <div class="fluid-bg-container">
-      <canvas id="fluid-canvas"></canvas>
-      <div class="glass-overlay"></div>
+    <!-- Synchronicity Geometric Background Canvas -->
+    <div class="synchronicity-bg-container">
+      <canvas id="synchronicity-bg-canvas"></canvas>
     </div>
-
-    <!-- SVG Gooey Filter for Canvas Liquid Simulation -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -12" result="goo" />
-          <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-      </defs>
-    </svg>
 
     <!-- Custom Cursor -->
     <div class="custom-cursor-dot" id="cursor-dot"></div>
@@ -64,6 +52,7 @@
           <div class="nav-links">
             <a href="#opportunity" class="nav-link navlink-anim" id="link-opportunity">OPPORTUNITY</a>
             <a href="#solutions" class="nav-link navlink-anim" id="link-solutions">PLATFORM</a>
+            <a href="#alignment-engine" class="nav-link navlink-anim" id="link-alignment">SYNCHRONICITY</a>
             <a href="#portfolio" class="nav-link navlink-anim" id="link-cases">PORTFOLIO</a>
             <a href="#founders" class="nav-link navlink-anim" id="link-founders">FIRM</a>
             <a href="#contact" class="nav-link nav-btn-outline navlink-anim" id="link-contact">CONTACT</a>
@@ -261,6 +250,76 @@
                   <h3 class="card-title">Operational Integration</h3>
                   <p class="card-text">Re-organizing distribution routes, executing cost mitigation sweeps, and deploying automated operational reporting.</p>
                   <a href="#contact" class="card-link" id="link-card-operations">Optimize Operations &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alignment Engine (Operational Synchronicity) Section -->
+      <section class="alignment-section" id="alignment-engine" data-section-slide-up>
+        <div class="container alignment-container">
+          <div class="alignment-layout">
+            <!-- Left Column: The Interactive Canvas -->
+            <div class="alignment-visual-pane">
+              <canvas id="alignment-canvas"></canvas>
+              <div class="alignment-overlay-label" id="alignment-overlay-label">[ LIVE ARTWORK: SYNCHRONICITY ]</div>
+            </div>
+
+            <!-- Right Column: Console / Controls -->
+            <div class="alignment-controls-pane">
+              <div class="console-header">
+                <span class="console-title">[ THE ALIGNMENT ENGINE ]</span>
+                <div class="console-status">
+                  <span class="status-indicator-dot" id="alignment-status-dot"></span>
+                  <span class="status-label" id="alignment-status-text">SYSTEM: ANOMALOUS</span>
+                </div>
+              </div>
+
+              <h2 class="console-heading">OPERATIONAL SYNCHRONICITY</h2>
+              <p class="console-description">
+                Inspired by geometric synchronicity and harmonic alignment. This engine demonstrates how Vanguard Synthesis orchestrates multiple chaotic business components into perfect, synchronized operational flow.
+              </p>
+
+              <!-- Sliders Console -->
+              <div class="console-sliders">
+                <!-- Velocity Slider -->
+                <div class="slider-group">
+                  <div class="slider-labels">
+                    <label for="slider-velocity" class="slider-name">VELOCITY</label>
+                    <span class="slider-value" id="val-velocity">1.0x</span>
+                  </div>
+                  <input type="range" id="slider-velocity" min="0" max="3" step="0.1" value="1.0" class="brutalist-slider" />
+                </div>
+
+                <!-- Density Slider -->
+                <div class="slider-group">
+                  <div class="slider-labels">
+                    <label for="slider-density" class="slider-name">DENSITY</label>
+                    <span class="slider-value" id="val-density">6 RINGS</span>
+                  </div>
+                  <input type="range" id="slider-density" min="3" max="10" step="1" value="6" class="brutalist-slider" />
+                </div>
+
+                <!-- Harmonics Slider -->
+                <div class="slider-group">
+                  <div class="slider-labels">
+                    <label for="slider-harmonics" class="slider-name">HARMONICS</label>
+                    <span class="slider-value" id="val-harmonics">LINEAR</span>
+                  </div>
+                  <input type="range" id="slider-harmonics" min="1" max="4" step="1" value="1" class="brutalist-slider" />
+                </div>
+              </div>
+
+              <!-- Action Bar -->
+              <div class="console-actions">
+                <button class="btn btn-primary magnetic" id="btn-sync-lock">
+                  <span>Lock Phase Alignment</span>
+                </button>
+                <div class="sync-percent-box">
+                  <span class="percent-label">COHERENCE:</span>
+                  <span class="percent-value" id="sync-percent-val">0%</span>
                 </div>
               </div>
             </div>
